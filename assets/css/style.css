@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+body {
+    background-image: url(../images/background-pattern-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 1em;
+    font-family: "Work Sans", sans-serif;
+}
+
+:root {
+--White: hsl(0, 0%, 100%);
+--Light-pink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+}
+
+h1,h2 {
+    color: var(--Dark-purple);
+}
+
+@keyframes show {
+    0% {
+     opacity: 0;
+    }
+
+    100% {
+      opacity: 1;  
+    }
+}
+
+#Card--main {
+    margin: 125px auto 50px auto;
+    padding: 1.5em;
+    width: 355px;
+    border-radius: 7px;
+    background-color: var(--Light-pink);
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 1.4em;
+}
+
+.line > img {
+    margin-right: 10px;
+}
+
+.line > h1 {
+    font-size: 1.7em;
+}
+
+.row {
+    display: flex;
+}
+
+.accordion-header {
+    margin: .5em 0;
+    padding: 1.7em 0;
+    border-bottom: 1px solid hsl(292, 16%, 49%,0.1);
+}
+
+.row > .accordion--titile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1em;
+    list-style: 1px;
+    width: 245px;
+    cursor: pointer;
+}
+
+
+
+
+.row .accordion--titile:hover  {
+   color: #9333b9;
+}
+
+
+.accordion-header .accordion-content {
+    padding: 1.5em 0;
+    color: var(--Grayish-purple);
+    display: none;
+}
+
+.accordion-header img {
+    margin-left: 1.5em;
+}
+
+.accordion-header .open {
+    display: block;
+}
+
+.accordion-header .close {
+    display: none;
+}
+
+.accordion-header.active .open {
+    display: none;
+}
+
+.accordion-header.active .close {
+    display: block;
+}
+
+
+.accordion-header.active .accordion-content {
+    display: block;
+    animation: show ease-in 0.5s;
+}
+
+
+
+
+@media (min-width:1000px) {
+    body {
+        background-image: url(../images/background-pattern-desktop.svg);
+    }
+
+    #Card--main {
+        padding: 2em;
+        width: 603px;
+    }
+
+    .line > h1 {
+        font-size: 3em;
+    }
+    
+
+    .row > .accordion--titile {
+        width: 500px;
+    }
+
+    .accordion--titile  {
+        font-size: 1.3em;
+    }
+    
+    
+}
+
+
